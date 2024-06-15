@@ -7,6 +7,8 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name="faturamento")
 @Data
@@ -19,5 +21,7 @@ public class Faturamento {
     public int despesa;
 
     public int ganho;
+
+    private LocalDate data;
 
 }

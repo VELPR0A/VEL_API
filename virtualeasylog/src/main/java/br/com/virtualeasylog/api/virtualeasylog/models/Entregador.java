@@ -28,6 +28,8 @@ public class Entregador {
 
     public String cnh;
 
+    public Boolean ativo;
+
 
 
 }
