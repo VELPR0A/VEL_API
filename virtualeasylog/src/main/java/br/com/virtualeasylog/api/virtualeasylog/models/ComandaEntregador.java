@@ -5,10 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="comanda")
+@Table(name="comanda_entregador")
 @Data
 @NoArgsConstructor
-public class Comanda {
+public class ComandaEntregador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,4 +19,6 @@ public class Comanda {
 
     @Column (name = "informacao_pagamento")
     private String informacaoPagamento;
+
+
 }

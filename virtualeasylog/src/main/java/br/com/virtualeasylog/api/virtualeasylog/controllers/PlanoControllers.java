@@ -1,6 +1,5 @@
-package br.com.virtualeasylog.api.virtualeasylog.Controllers;
+package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
-import br.com.virtualeasylog.api.virtualeasylog.models.Comanda;
 import br.com.virtualeasylog.api.virtualeasylog.models.Plano;
 import br.com.virtualeasylog.api.virtualeasylog.repositories.PlanoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

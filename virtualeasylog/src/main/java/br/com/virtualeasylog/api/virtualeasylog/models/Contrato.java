@@ -16,13 +16,13 @@ import java.util.Date;
 public class Contrato {
     @Id
     @Column
-    public int id;
+    private int id;
 
     @Column (name = "caminho_contrato")
-    public String caminhoContrato;
+    private String caminhoContrato;
 
     @Column (name="data_criacao")
-    public Date dataCriacao;
+    private Date dataCriacao;
 
 
 

@@ -13,32 +13,31 @@ public class Empresa {
 
     @Id
     @Column (name = "id_cnpj")
-    public String idCnpj;
+    private String idCnpj;
 
-    public String email;
-    public String endereco;
-    public String telefone;
-    public String proprietario;
+    private String email;
+    private String endereco;
+    private String telefone;
+    private String proprietario;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="id_plano")
-    public Plano plano;
+    private Plano plano;
 
 
     @Column (name = "id_faturamento")
-    public Integer idFaturamento;
+    private Integer idFaturamento;
 
     @Column (name = "id_cpf_coord")
-    public Integer idCpfCoord;
+    private Integer idCpfCoord;
 
     @Column (name = "id_cpf")
-    public String idCpf;
+    private String idCpf;
 
     @Column (name = "id_contrato")
-    public Integer idContrato;
+    private Integer idContrato;
 
     @Column
     private String senha;
-
 
 }

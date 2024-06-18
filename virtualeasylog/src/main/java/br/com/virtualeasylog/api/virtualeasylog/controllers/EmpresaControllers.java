@@ -1,4 +1,4 @@
-package br.com.virtualeasylog.api.virtualeasylog.Controllers;
+package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
 import br.com.virtualeasylog.api.virtualeasylog.models.Empresa;
 import br.com.virtualeasylog.api.virtualeasylog.repositories.EmpresaRepository;
@@ -26,7 +26,7 @@ public class EmpresaControllers {
     @CrossOrigin
     @GetMapping("/id/{id}")
     public Optional<Empresa> listarPorId (@PathVariable Integer id){
-        Optional<Empresa> empresa =empresaRepository.findById(id);
+        Optional<Empresa> empresa =empresaRepository.findById(Long.valueOf(id));
         return empresa;
 
     }
@@ -55,5 +55,8 @@ public class EmpresaControllers {
         }
         return "comanda não encontrada";
     }
+
+
+
 
 }

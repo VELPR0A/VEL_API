@@ -1,4 +1,4 @@
-package br.com.virtualeasylog.api.virtualeasylog.Controllers;
+package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
 import br.com.virtualeasylog.api.virtualeasylog.models.Entregador;
 import br.com.virtualeasylog.api.virtualeasylog.repositories.EntregadorRepository;

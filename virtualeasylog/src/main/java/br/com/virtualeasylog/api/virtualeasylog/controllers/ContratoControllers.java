@@ -1,9 +1,7 @@
-package br.com.virtualeasylog.api.virtualeasylog.Controllers;
+package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
 import br.com.virtualeasylog.api.virtualeasylog.models.Contrato;
 import br.com.virtualeasylog.api.virtualeasylog.repositories.ContratoRepository;
-import org.antlr.v4.runtime.misc.NotNull;
-import org.hibernate.annotations.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

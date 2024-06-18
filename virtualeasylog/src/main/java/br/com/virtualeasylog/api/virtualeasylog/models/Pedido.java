@@ -8,17 +8,31 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="coordenador")
+@Table
 @Data
 @NoArgsConstructor
-public class Coordenador {
+public class Pedido {
 
     @Id
-    @Column (name = "id_cpf")
-    private String idCpf;
+    private Integer id;
 
-    private String NOME;
+    private String nome;
 
-    private String TELEFONE;
+    private Integer telefone;
+
+    private  String endereco;
+
+    private  String descricao;
+
+    private Integer valor;
+
+    @Column (name="id_cpf")
+    private  String idCpf;
+
+
+
+
+
 
 }
+

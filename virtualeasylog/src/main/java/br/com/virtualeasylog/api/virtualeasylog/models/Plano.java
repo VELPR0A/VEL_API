@@ -18,9 +18,9 @@ public class Plano {
     @Column (name = "nome_plano")
     private String nomePlano;
 
-    @OneToMany(mappedBy = "plano", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "plano", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
-    private List<Empresa> empresas;
 
+    private List<Empresa> empresas;
 
 }

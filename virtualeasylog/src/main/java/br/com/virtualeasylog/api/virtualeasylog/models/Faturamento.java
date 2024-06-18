@@ -16,11 +16,11 @@ import java.time.LocalDate;
 public class Faturamento {
 
     @Id
-    public int id;
+    private int id;
 
-    public int despesa;
+    private int despesa;
 
-    public int ganho;
+    private int ganho;
 
     private LocalDate data;
 

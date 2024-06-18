@@ -1,7 +1,6 @@
-package br.com.virtualeasylog.api.virtualeasylog.Controllers;
+package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
 import br.com.virtualeasylog.api.virtualeasylog.models.Faturamento;
-import br.com.virtualeasylog.api.virtualeasylog.repositories.EntregadorRepository;
 import br.com.virtualeasylog.api.virtualeasylog.repositories.FaturamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -15,20 +15,21 @@ public class Entregador {
 
     @Id
     @Column (name = "id_cpf")
-    public String idCpf;
+    private String idCpf;
 
-    public String nome;
+    private String nome;
 
-    public String telefone;
+    private String telefone;
 
-    public String email;
+    private String email;
 
     @Column (name = "conta_bancaria")
-    public String contaBancaria;
+    private String contaBancaria;
 
-    public String cnh;
+    private String cnh;
 
-    public Boolean ativo;
+    private Boolean status;
+
 
 
 
