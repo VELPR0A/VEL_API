@@ -17,11 +17,16 @@ public class LoginControllers {
         String email = loginRequisição.getEmail();
         String senha = loginRequisição.getSenha();
 
+        System.out.println(email);
+
+        System.out.println(senha);
+
         boolean acesso = empresaRepository.existsByEmailAndSenha(email, senha);
         if (acesso) {
             return "Login realizado com sucesso para o email: " + email;
         } else {
             return "Email ou senha inválidos";
         }
+
     }
 }
