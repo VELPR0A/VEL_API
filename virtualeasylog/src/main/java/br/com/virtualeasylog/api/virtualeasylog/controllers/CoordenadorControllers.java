@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RequestMapping("/coordenador")
 @RestController
-public class CoordenadorControllers {
+public class CoordenadorControllers{
 
     @Autowired
     private CoordenadorRepository coordenadorRepository;

@@ -23,6 +23,7 @@ public class EmpresaControllers {
         return empresa;
     }
 
+
     @CrossOrigin
     @GetMapping("/id/{id}")
     public Optional<Empresa> listarPorId (@PathVariable Integer id){

@@ -29,7 +29,7 @@ public class PedidoControllers {
     }
 
     @CrossOrigin
-    @PostMapping("adicionar")
+    @PostMapping("/adicionar")
     public Pedido adicionar(@RequestBody Pedido pedido){
         return pedidoRepository.save(pedido);
     }

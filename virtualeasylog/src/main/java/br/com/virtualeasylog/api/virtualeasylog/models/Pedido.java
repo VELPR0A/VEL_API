@@ -1,9 +1,6 @@
 package br.com.virtualeasylog.api.virtualeasylog.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,17 +11,20 @@ import lombok.NoArgsConstructor;
 public class Pedido {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String nome;
 
-    private Integer telefone;
+    private String telefone;
 
     private  String endereco;
 
     private  String descricao;
 
     private Integer valor;
+
+    private Integer formaPagamento;
 
     @Column (name="id_cpf")
     private  String idCpf;

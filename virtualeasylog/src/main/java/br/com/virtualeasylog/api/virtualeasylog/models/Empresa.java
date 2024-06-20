@@ -1,6 +1,7 @@
 package br.com.virtualeasylog.api.virtualeasylog.models;
 
 
+import br.com.virtualeasylog.api.virtualeasylog.Interfaces.LoginResponsePayLoad;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Table(name="empresa")
 @Data
 @NoArgsConstructor
-public class Empresa {
+public class Empresa implements LoginResponsePayLoad {
 
     @Id
     @Column (name = "id_cnpj")
@@ -40,4 +41,8 @@ public class Empresa {
     @Column
     private String senha;
 
+    @Override
+    public String getId() {
+        return idCnpj;
+    }
 }
