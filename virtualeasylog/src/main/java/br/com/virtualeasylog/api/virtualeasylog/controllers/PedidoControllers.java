@@ -28,11 +28,16 @@ public class PedidoControllers {
         return pedidoRepository.findById(id);
     }
 
-    @CrossOrigin
-    @PostMapping("/adicionar")
-    public Pedido adicionar(@RequestBody Pedido pedido){
+  @CrossOrigin
+    @PostMapping("/adicionar/{idUsuario}")
+    public Pedido adicionar(@RequestBody Pedido pedido, @PathVariable Integer idUsuario) {
+        // Define o idUsuario no pedido
+        pedido.setIdUsuario(Math.toIntExact(idUsuario));
+
+        // Salva o pedido no banco de dados
         return pedidoRepository.save(pedido);
     }
+
 
     @CrossOrigin
     @PutMapping("/editar")

@@ -26,8 +26,11 @@ public class Pedido {
 
     private Integer formaPagamento;
 
+    private Integer idUsuario;
+
     @Column (name="id_cpf")
     private  String idCpf;
+
 
 
 
