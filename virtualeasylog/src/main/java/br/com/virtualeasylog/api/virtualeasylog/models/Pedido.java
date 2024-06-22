@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Entity
 @Table(name="pedido")
 @Data
@@ -27,6 +30,10 @@ public class Pedido {
     private Integer formaPagamento;
 
     private Integer idUsuario;
+
+    private LocalDate dataPedido;
+
+    private boolean entregue;
 
     @Column (name="id_cpf")
     private  String idCpf;

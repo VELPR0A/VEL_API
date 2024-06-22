@@ -6,6 +6,10 @@ import br.com.virtualeasylog.api.virtualeasylog.repositories.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,10 +21,17 @@ public class PedidoControllers {
     private PedidoRepository pedidoRepository;
 
     @CrossOrigin
-    @GetMapping("/")
+    @GetMapping("/pedido-semana")
     public List<Pedido> findallRecord() {
-        return pedidoRepository.findAll();
+        LocalDate dataInicial = LocalDate.now().with(DayOfWeek.MONDAY);
+        LocalDate dataFinal = dataInicial.plusDays(6);
+
+        return pedidoRepository.findPedidosDaSemana(dataInicial, dataFinal);
     }
+
+     /*public List<Pedido> findallRecord() {
+        return pedidoRepository.findAll();
+    }*/
 
     @CrossOrigin
     @GetMapping("/id/{id}")
@@ -28,13 +39,11 @@ public class PedidoControllers {
         return pedidoRepository.findById(id);
     }
 
-  @CrossOrigin
+    @CrossOrigin
     @PostMapping("/adicionar/{idUsuario}")
     public Pedido adicionar(@RequestBody Pedido pedido, @PathVariable Integer idUsuario) {
-        // Define o idUsuario no pedido
         pedido.setIdUsuario(Math.toIntExact(idUsuario));
 
-        // Salva o pedido no banco de dados
         return pedidoRepository.save(pedido);
     }
 
