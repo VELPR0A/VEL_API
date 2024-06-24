@@ -15,10 +15,18 @@ public class FaturamentoControllers {
     @Autowired
     private FaturamentoRepository faturamentoRepository;
 
+
     @CrossOrigin
     @GetMapping("/")
     public List<Faturamento> listar(){
         return faturamentoRepository.findAll();
+    }
+
+    //retornara o faturamento com base no id da empresa
+    @CrossOrigin
+    @GetMapping("/{id_cnpj}")
+    public List<Faturamento> listarPorCnpj(@PathVariable Long id_cnpj) {
+        return faturamentoRepository.findByIdCnpj(String.valueOf(id_cnpj));
     }
 
     @CrossOrigin

@@ -11,7 +11,6 @@ import java.util.*;
 @RequestMapping("/comanda")
 public class ComandaEntregadorControllers {
 
-    //private static final Logger logger = LoggerFactory.getLogger(ComandasControllers.class);
 
     @Autowired
     private ComandaRepository comandaRepository;

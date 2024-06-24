@@ -30,6 +30,9 @@ public class Entregador {
 
     private Boolean status;
 
+    @Column(name="id_cnpj")
+    private String idCnpj;
+
 
 
 

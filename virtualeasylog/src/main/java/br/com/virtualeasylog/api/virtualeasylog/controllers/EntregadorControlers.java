@@ -21,6 +21,11 @@ public class EntregadorControlers {
         return entregadorRepository.findAll();
     }
 
+    //retorna o todos os entregadores com id da empresa
+    @GetMapping("/{id_cnpj}")
+    public List<Entregador> listarPorCnpj(@PathVariable Long id_cnpj) {
+        return entregadorRepository.findByIdCnpj(String.valueOf(id_cnpj));
+    }
 
 
     @GetMapping("/id/{id}")

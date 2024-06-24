@@ -15,4 +15,6 @@ public interface EntregadorRepository extends JpaRepository<Entregador, String> 
     boolean existsById(String idCpf);
 
     List<Entregador> findAll();
+
+    List<Entregador> findByIdCnpj(String id_cnpj);
 }

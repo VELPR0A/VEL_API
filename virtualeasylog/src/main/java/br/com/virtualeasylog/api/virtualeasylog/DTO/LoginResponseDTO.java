@@ -9,13 +9,11 @@ public class LoginResponseDTO {
 
     public LoginResponseDTO(LoginResponsePayLoad payLoad){
         this.setId(payLoad.getId());
-        /*Pedido exemplo = payLoad;
-        return pedidoRepository.save(exemplo);*/
         this.setIsproprietario(payLoad instanceof Empresa);
 
 
     }
 
-    private String id;
+    public String id;
     private boolean isproprietario;
 }
