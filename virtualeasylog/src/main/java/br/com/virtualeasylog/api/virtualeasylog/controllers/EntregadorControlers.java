@@ -1,7 +1,9 @@
 package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
+import br.com.virtualeasylog.api.virtualeasylog.models.ComandaEntregador;
 import br.com.virtualeasylog.api.virtualeasylog.models.Entregador;
 import br.com.virtualeasylog.api.virtualeasylog.repositories.EntregadorRepository;
+import br.com.virtualeasylog.api.virtualeasylog.service.EntregadorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -61,5 +63,18 @@ public class EntregadorControlers {
             return "Apagado com sucesso";
         }
         return "Comanda não encontrada";
+    }
+
+    @Autowired
+    private EntregadorService entregadorService;
+
+    @GetMapping
+    public List<Entregador> getAllEntregadores() {
+        return entregadorService.getAllEntregadores();
+    }
+
+    @GetMapping("/{idCpf}/comandas")
+    public List<ComandaEntregador> getComandasByEntregadorId(@PathVariable String idCpf) {
+        return entregadorService.getComandasByEntregadorId(idCpf);
     }
 }

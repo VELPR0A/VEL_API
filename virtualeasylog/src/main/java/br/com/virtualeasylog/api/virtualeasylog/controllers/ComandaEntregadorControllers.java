@@ -1,7 +1,7 @@
 package br.com.virtualeasylog.api.virtualeasylog.controllers;
 
 import br.com.virtualeasylog.api.virtualeasylog.models.ComandaEntregador;
-import br.com.virtualeasylog.api.virtualeasylog.repositories.ComandaRepository;
+import br.com.virtualeasylog.api.virtualeasylog.repositories.ComandaEntregadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ public class ComandaEntregadorControllers {
 
 
     @Autowired
-    private ComandaRepository comandaRepository;
+    private ComandaEntregadorRepository comandaRepository;
 
     //url de teste = http://localhost:8084/comanda/
     @CrossOrigin
