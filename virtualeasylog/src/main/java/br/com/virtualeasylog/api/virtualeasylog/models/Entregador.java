@@ -7,12 +7,6 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.util.List;
-
 @Entity
 @Table(name="entregador")
 @Data
@@ -39,8 +33,11 @@ public class Entregador {
     @Column(name="id_cnpj")
     private String idCnpj;
 
-    @OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ComandaEntregador> comandas;
+    private Integer turno;
+
+    //@OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    //private List<ComandaEntregador> comandas;
+
 }
 
 /*

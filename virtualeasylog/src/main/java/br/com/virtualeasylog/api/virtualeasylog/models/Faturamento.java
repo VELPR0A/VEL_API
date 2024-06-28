@@ -18,11 +18,14 @@ public class Faturamento {
     @Id
     private int id;
 
-    private Integer despesa;
+    private Float despesa;
 
-    private int ganho;
+    private Float ganho;
 
     private LocalDate data;
+
+    @Column(name = "id_cpf")
+    private String idCpf;
 
 
     @Column(name="cnpj_id")
