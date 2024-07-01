@@ -41,6 +41,7 @@ public class Entregador {
     @Column(name="id_cnpj")
     private String idCnpj;
 
+    private Integer turno;
 
 //    @OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //    private List<ComandaEntregador> comandas;

@@ -37,3 +37,5 @@ qvirtualeasylog/src/main/java/br/com/virtualeasylog/api/virtualeasylog/controlle
 lvirtualeasylog/src/main/java/br/com/virtualeasylog/api/virtualeasylog/repositories/EntregadorRepository.java,a\d\adcdbea8c7546068521fd2e1a688e71a9d3ac4ed
 Œ
 \virtualeasylog/src/main/java/br/com/virtualeasylog/api/virtualeasylog/models/Entregador.java,1\7\1783571353925b4f3c1cc86dbdd673f98daf7ef4
+‰
+Yvirtualeasylog/src/main/java/br/com/virtualeasylog/api/virtualeasylog/models/Empresa.java,0\7\07e9df135c8bd00eb751cb7251aed3db2c4e54e6
