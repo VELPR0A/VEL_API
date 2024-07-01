@@ -29,6 +29,8 @@ public class Entregador {
 
     private String email;
 
+    private String senha;
+
     @Column(name = "conta_bancaria")
     private String contaBancaria;
 
@@ -39,8 +41,9 @@ public class Entregador {
     @Column(name="id_cnpj")
     private String idCnpj;
 
-    @OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ComandaEntregador> comandas;
+
+//    @OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<ComandaEntregador> comandas;
 }
 
 /*
