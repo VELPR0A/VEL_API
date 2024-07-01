@@ -7,6 +7,12 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.util.List;
+
 @Entity
 @Table(name="entregador")
 @Data
@@ -23,6 +29,8 @@ public class Entregador {
 
     private String email;
 
+    private String senha;
+
     @Column(name = "conta_bancaria")
     private String contaBancaria;
 
@@ -35,9 +43,8 @@ public class Entregador {
 
     private Integer turno;
 
-    //@OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    //private List<ComandaEntregador> comandas;
-
+//    @OneToMany(mappedBy = "entregador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<ComandaEntregador> comandas;
 }
 
 /*
