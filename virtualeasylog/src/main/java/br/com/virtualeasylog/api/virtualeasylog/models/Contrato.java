@@ -24,6 +24,11 @@ public class Contrato {
     @Column (name="data_criacao")
     private Date dataCriacao;
 
+    private String nome;
+
+    @Column (name = "id_cnpj")
+    private String idCnpj;
+
 
 
 }

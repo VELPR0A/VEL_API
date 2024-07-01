@@ -21,10 +21,19 @@ public class ContratoControllers {
         return contrato;
     }
 
+    //retorna de um id de contrato especifico
     @CrossOrigin
     @GetMapping("/id/{id}")
     public Optional<Contrato> listarPorId(@PathVariable Integer id){
         Optional<Contrato> contrato = contratoRepository.findById(id);
+        return contrato;
+    }
+
+    //retorna um contrato com id de uma empresa
+    @CrossOrigin
+    @GetMapping("/idcnpj/{idcnpj}")
+    public Optional<Contrato> listarPorIdContrato (@PathVariable ("idcnpj") String idCnpj){
+        Optional<Contrato> contrato = contratoRepository.findByIdCnpj(String.valueOf(idCnpj));
         return contrato;
     }
 

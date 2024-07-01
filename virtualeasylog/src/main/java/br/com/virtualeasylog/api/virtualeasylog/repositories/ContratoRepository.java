@@ -19,4 +19,6 @@ public interface ContratoRepository extends JpaRepository<Contrato, Integer> {
         void delete(Contrato contrato);
 
         Contrato findByCaminhoContrato(String caminhoContrato);
+
+    Optional<Contrato> findByIdCnpj(String idCnpj);
 }
