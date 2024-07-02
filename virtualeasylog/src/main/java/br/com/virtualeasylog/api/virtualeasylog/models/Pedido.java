@@ -35,8 +35,8 @@ public class Pedido {
 
     private boolean entregue;
 
-    @Column (name="id_cpf")
-    private  String idCpf;
+    @Column (name="cpf_id")
+    private  String cpfId;
 
 
 

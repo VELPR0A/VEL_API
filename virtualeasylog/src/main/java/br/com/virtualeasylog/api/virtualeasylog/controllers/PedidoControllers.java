@@ -29,6 +29,12 @@ public class PedidoControllers {
         return pedidoRepository.findPedidosDaSemana(dataInicial, dataFinal);
     }
 
+   @GetMapping("/info/{id_cpf}")
+    public List<Pedido> listarPorCpf(@PathVariable("id_cpf") String cpfId) {
+        return pedidoRepository.findAllByCpfId(cpfId);
+    }
+
+
      /*public List<Pedido> findallRecord() {
         return pedidoRepository.findAll();
     }*/

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/VEL.iml" filepath="$PROJECT_DIR$/.idea/VEL.iml" />
-      <module fileurl="file://$PROJECT_DIR$/virtualeasylog/virtualeasylog.iml" filepath="$PROJECT_DIR$/virtualeasylog/virtualeasylog.iml" />
     </modules>
   </component>
 </project>

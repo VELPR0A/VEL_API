@@ -38,6 +38,14 @@ public class ContratoControllers {
     }
 
     @CrossOrigin
+    @GetMapping("/idcpf/{idcpf}")
+    public Optional<Contrato> listarPorIdEntregador (@PathVariable("idcpf") String idCpf) {
+        return contratoRepository.findByIdCpf(idCpf);
+    }
+
+
+
+    @CrossOrigin
     @PostMapping("/adicionar")
     public Contrato adicionar (@RequestBody Contrato contrato){
             return contratoRepository.save(contrato);

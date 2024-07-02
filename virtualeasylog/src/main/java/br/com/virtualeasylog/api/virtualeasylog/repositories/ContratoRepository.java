@@ -21,4 +21,6 @@ public interface ContratoRepository extends JpaRepository<Contrato, Integer> {
         Contrato findByCaminhoContrato(String caminhoContrato);
 
     Optional<Contrato> findByIdCnpj(String idCnpj);
+
+    Optional<Contrato> findByIdCpf(String idCpf);
 }

@@ -1,6 +1,5 @@
 package br.com.virtualeasylog.api.virtualeasylog.models;
 
-import br.com.virtualeasylog.api.virtualeasylog.DTO.LoginResponseDTO;
 import br.com.virtualeasylog.api.virtualeasylog.Interfaces.LoginResponsePayLoad;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Coordenador implements LoginResponsePayLoad {
 
     @Id
-    @Column(name = "id_cpf")
-    private String idCpf;
+    @Column(name = "id_cpf_coord")
+    private String idCpfCoord;
 
     private String NOME;
 
@@ -27,8 +26,15 @@ public class Coordenador implements LoginResponsePayLoad {
 
     private String email;
 
+    @Column(name = "id_cnpj")
+    private String idCnpj;
+
+
     @Override
     public String getId() {
-        return idCpf;
+        return null;
     }
+
+
 }
+

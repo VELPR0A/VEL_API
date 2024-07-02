@@ -38,7 +38,7 @@ public class CoordenadorControllers{
     @CrossOrigin
     @PutMapping("/editar")
     public String editar(@RequestBody Coordenador coordenador){
-        if (coordenadorRepository.existsById(coordenador.getIdCpf())){
+        if (coordenadorRepository.existsById(coordenador.getIdCpfCoord())){
             coordenadorRepository.save(coordenador);
             return "editado com sucesso";
         }
@@ -49,7 +49,7 @@ public class CoordenadorControllers{
     @CrossOrigin
     @DeleteMapping("/apagar")
     public String deletar (@RequestBody Coordenador coordenador){
-        if (coordenadorRepository.existsById(coordenador.getIdCpf())){
+        if (coordenadorRepository.existsById(coordenador.getIdCpfCoord())){
             coordenadorRepository.delete(coordenador);
             return "apagado com sucesso";
         }
@@ -57,6 +57,11 @@ public class CoordenadorControllers{
     }
 
 
+    @CrossOrigin
+    @GetMapping("/idcnpj/{idCnpj}")
+    public List<Coordenador> findAllByIdCnpj(@PathVariable("idCnpj") String idCnpj) {
+        return coordenadorRepository.findByIdCnpj(idCnpj);
+    }
 
 
 }

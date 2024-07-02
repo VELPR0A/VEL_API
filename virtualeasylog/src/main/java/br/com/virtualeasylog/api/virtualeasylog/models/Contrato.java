@@ -29,6 +29,9 @@ public class Contrato {
     @Column (name = "id_cnpj")
     private String idCnpj;
 
+    @Column(name = "id_cpf")
+    private String idCpf;
+
 
 
 }

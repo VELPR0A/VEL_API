@@ -6,14 +6,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Integer> {
     List<Pedido> findAll();
 
-    Optional<Pedido> findById(Integer id);
 
     Pedido save(Pedido pedido);
 
@@ -21,4 +19,8 @@ public interface PedidoRepository extends JpaRepository<Pedido, Integer> {
 
     @Query("SELECT p FROM Pedido p WHERE p.dataPedido BETWEEN :dataInicial AND :dataFinal AND p.entregue = false")
     List<Pedido> findPedidosDaSemana(@Param("dataInicial") LocalDate dataInicial, @Param("dataFinal") LocalDate dataFinal);
+
+
+
+    List<Pedido> findAllByCpfId(String cpfId);
 }

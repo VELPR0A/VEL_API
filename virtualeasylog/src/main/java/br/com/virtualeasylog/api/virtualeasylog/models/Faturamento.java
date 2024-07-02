@@ -1,9 +1,6 @@
 package br.com.virtualeasylog.api.virtualeasylog.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +13,7 @@ import java.time.LocalDate;
 public class Faturamento {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private Float despesa;
@@ -30,5 +28,9 @@ public class Faturamento {
 
     @Column(name="cnpj_id")
     private String idCnpj;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cpf", referencedColumnName = "id_cpf", insertable = false, updatable = false)
+    private Entregador entregador;
 
 }
