@@ -39,6 +39,9 @@ public class Pedido {
     private  String cpfId;
 
 
+    @Column(name="id_cpf_coord")
+    private String idCpfCoord;
+
 
 
 

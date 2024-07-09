@@ -14,14 +14,14 @@ public class ComandaEntregador {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "endereco_entrega")
+    @Column(name = "endereço_entrega")
     private String enderecoEntrega;
 
     @Column(name = "informacao_pagamento")
     private String informacaoPagamento;
 
     @ManyToOne
-    @JoinColumn(name = "entregador_id")
+    @JoinColumn(name = "id_cpf")
     private Entregador entregador;
 }
 

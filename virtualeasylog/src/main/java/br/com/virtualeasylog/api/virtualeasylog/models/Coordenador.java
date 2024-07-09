@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Coordenador implements LoginResponsePayLoad {
 
     @Id
-    @Column(name = "id_cpf_coord")
-    private String idCpfCoord;
+    @Column(name = "id_cpf")
+    private String idCpf;
 
     private String NOME;
 
